@@ -53,7 +53,7 @@ export default function ProductListing({
     let currentProducts = [...accumulatedProducts];
     if (currentFilters.search) {
       currentProducts = currentProducts.filter((item) =>
-        item.title.includes(currentFilters.search)
+        item.title.toLowerCase().includes(currentFilters.search.toLowerCase())
       );
     }
     if (currentFilters.startDate) {
